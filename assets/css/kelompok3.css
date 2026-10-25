@@ -649,64 +649,76 @@ a {
     }
 }
 
-/* === FIX CARD PUTIH TENGAH KAYAK PUNYA TEMEN - 2413010662 === */
+/* === KHUSUS PRE-ORDER 2413010662 - CARD PUTIH TENGAH === */
+.preOrderWrapperkelompok3,
 .pembayaranWrapperkelompok3{
     width:min(100% - 32px, 760px);
     margin:40px auto;
-    padding:0
+    padding:0;
 }
+.preOrderPanelkelompok3,
 .pembayaranPanelkelompok3{
     background:#fffefd;
     padding:32px;
     border-radius:20px;
     border:1px solid rgba(100,63,39,.08);
-    box-shadow:0 12px 34px rgba(83,52,27,.08)
+    box-shadow:0 12px 34px rgba(83,52,27,.08);
 }
+.preOrderEyebrowkelompok3,
 .pembayaranEyebrowkelompok3{
     margin:0 0 8px;
     color:var(--red);
     font-size:12px;
     font-weight:800;
     letter-spacing:.08em;
-    text-transform:uppercase
+    text-transform:uppercase;
 }
+.preOrderPanelkelompok3 h2,
 .pembayaranPanelkelompok3 h2{
     margin:0 0 12px;
     font-size:32px;
     line-height:1.1;
-    color:var(--brown)
+    color:var(--brown);
 }
+.preOrderIntrokelompok3,
 .pembayaranIntrokelompok3{
     margin:0;
     color:var(--brown-soft);
     font-size:14px;
-    line-height:1.6
+    line-height:1.6;
 }
+.preOrderFormkelompok3,
 .pembayaranFormkelompok3{
     display:grid;
     gap:16px;
-    margin-top:24px
+    margin-top:24px;
 }
+.preOrderFormkelompok3 label,
 .pembayaranFormkelompok3 label{
     display:grid;
     gap:8px;
     font-weight:700;
     font-size:14px;
-    color:var(--brown)
+    color:var(--brown);
 }
-.pembayaranFormkelompok3 input,.pembayaranFormkelompok3 select,.pembayaranFormkelompok3 textarea{
+.preOrderFormkelompok3 input,
+.preOrderFormkelompok3 select,
+.preOrderFormkelompok3 textarea,
+.pembayaranFormkelompok3 input,
+.pembayaranFormkelompok3 select,
+.pembayaranFormkelompok3 textarea{
     width:100%;
     min-height:48px;
     padding:12px 14px;
     border:1px solid #e7d5c0;
     border-radius:12px;
     background:#fff;
-    font:inherit
+    font:inherit;
+    color:var(--brown);
 }
-.pembayaranFormkelompok3 textarea{
-    min-height:100px;
-    resize:vertical
-}
+.preOrderFormkelompok3 textarea,
+.pembayaranFormkelompok3 textarea{min-height:100px;resize:vertical}
+.preOrderButtonkelompok3,
 .pembayaranButtonkelompok3{
     min-height:52px;
     border:0;
@@ -716,26 +728,25 @@ a {
     font-weight:800;
     font-size:15px;
     cursor:pointer;
-    margin-top:8px
+    margin-top:8px;
 }
-.pembayaranButtonkelompok3:hover{
-    background:var(--red-dark)
-}
+.preOrderButtonkelompok3:hover,
+.pembayaranButtonkelompok3:hover{background:var(--red-dark)}
+.preOrderErrorkelompok3,
 .pembayaranErrorkelompok3{
     background:#fff0f0;
     color:var(--red-dark);
     padding:12px 14px;
     border-radius:10px;
-    font-size:14px
+    font-size:14px;
 }
+.preOrderReceiptRowkelompok3,
 .pembayaranReceiptRowkelompok3{
     display:flex;
     justify-content:space-between;
     gap:12px;
     padding:12px 0;
-    border-bottom:1px solid #f0dfc8
+    border-bottom:1px solid #f0dfc8;
 }
-.pembayaranSuccesskelompok3{
-    border-color:#b7ddbe;
-    background:#f1fff3
-}
+.preOrderSuccesskelompok3,
+.pembayaranSuccesskelompok3{border-color:#b7ddbe;background:#f1fff3}
