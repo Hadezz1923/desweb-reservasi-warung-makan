@@ -12,6 +12,15 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
     <title>Warung Makan Mb Dina | Rasa Rumahan, Selalu Dirindukan</title>
     <link rel="stylesheet" href="assets/css/kelompok3.css?v=10" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <?php if ($reservasi === 'pre-order'): ?>
+        <?php $reservasiPreOrderStyles = true; include __DIR__ . '/form_mahasiswa/2413010662.php'; unset($reservasiPreOrderStyles); ?>
+    <?php endif; ?>
+    <?php if ($reservasi === 'booking'): ?>
+        <?php $reservasiBookingStyles = true; include __DIR__ . '/form_mahasiswa/2513010757.php'; unset($reservasiBookingStyles); ?>
+    <?php endif; ?>
+    <?php if ($reservasi === 'pembayaran'): ?>
+        <?php $reservasiPaymentStyles = true; include __DIR__ . '/form_mahasiswa/2513010779.php'; unset($reservasiPaymentStyles); ?>
+    <?php endif; ?>
 </head>
 <body>
     <header class="site-headerkelompok3">
@@ -65,6 +74,9 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
         } elseif ($reservasi === 'booking') {
             // include booking
             // include __DIR__ . '/form_mahasiswa/xxxx.php';
+        }
+        if ($reservasi === 'booking') {
+            include __DIR__ . '/form_mahasiswa/2513010757.php';
         }
         ?>
 
