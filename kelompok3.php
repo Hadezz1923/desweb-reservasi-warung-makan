@@ -15,6 +15,9 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <?php if ($reservasi === 'booking'): ?>
+        <?php $reservasiBookingStyles = true; include __DIR__ . '/form_mahasiswa/2513010757.php'; unset($reservasiBookingStyles); ?>
+    <?php endif; ?>
     <?php if ($reservasi === 'pembayaran'): ?>
         <?php $reservasiPaymentStyles = true; include __DIR__ . '/form_mahasiswa/2513010779.php'; unset($reservasiPaymentStyles); ?>
     <?php endif; ?>
@@ -143,6 +146,9 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
         <?php
         if ($reservasi === 'pembayaran') {
             include __DIR__ . '/form_mahasiswa/2513010779.php';
+        }
+        if ($reservasi === 'booking') {
+            include __DIR__ . '/form_mahasiswa/2513010757.php';
         }
         ?>
 
