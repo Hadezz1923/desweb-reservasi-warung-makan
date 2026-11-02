@@ -22,6 +22,7 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
         <?php $reservasiPreOrderStyles = true; include __DIR__ . '/form_mahasiswa/2413010662.php'; unset($reservasiPreOrderStyles); ?>
     <?php endif; ?>
     <?php if ($reservasi === 'pembayaran'): ?>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <?php $reservasiPaymentStyles = true; include __DIR__ . '/form_mahasiswa/2513010779.php'; unset($reservasiPaymentStyles); ?>
     <?php endif; ?>
 </head>
@@ -32,6 +33,7 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
             <div class="nav-linkskelompok3">
                 <a href="#homekelompok3" class="menu-navkelompok3 activekelompok3">Beranda</a>
                 <a href="#menukelompok3" class="menu-navkelompok3">Menu</a>
+                <a href="#reservasi-herokelompok3" class="menu-navkelompok3">Reservasi</a>
                 <a href="#tentangkelompok3" class="menu-navkelompok3">Tentang Kami</a>
             </div>
         </nav>
@@ -70,7 +72,7 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
             </div>
         </section>
 
-        <section class="reservasi-herokelompok3 section-wrapkelompok3">
+        <section class="reservasi-herokelompok3 section-wrapkelompok3" id="reservasi-herokelompok3">
             <div class="section-headingkelompok3 reservasi-headingkelompok3"><p class="eyebrowkelompok3">PILIH LAYANAN RESERVASI</p><h2>Reservasi <span>tanpa ribet.</span></h2></div>
             <div class="reservasi-gridkelompok3">
                 <a class="reservasi-cardkelompok3" href="kelompok3.php">Kembali</a>
