@@ -32,6 +32,7 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
             <div class="nav-linkskelompok3">
                 <a href="#homekelompok3" class="menu-navkelompok3 activekelompok3">Beranda</a>
                 <a href="#menukelompok3" class="menu-navkelompok3">Menu</a>
+                <a href="#reservasiKelompok3" class="menu-navkelompok3">Reservasi</a>
                 <a href="#tentangkelompok3" class="menu-navkelompok3">Tentang Kami</a>
             </div>
         </nav>
@@ -70,7 +71,7 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
             </div>
         </section>
 
-        <section class="reservasi-herokelompok3 section-wrapkelompok3">
+        <section class="reservasi-herokelompok3 section-wrapkelompok3" id="reservasiKelompok3">
             <div class="section-headingkelompok3 reservasi-headingkelompok3"><p class="eyebrowkelompok3">PILIH LAYANAN RESERVASI</p><h2>Reservasi <span>tanpa ribet.</span></h2></div>
             <div class="reservasi-gridkelompok3">
                 <a class="reservasi-cardkelompok3" href="kelompok3.php">Kembali</a>
