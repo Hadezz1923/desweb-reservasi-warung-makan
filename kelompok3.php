@@ -61,6 +61,7 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
             <article class="step-cardkelompok3"><span class="step-numberkelompok3 step-goldkelompok3">03.</span><h2>Pembayaran Mudah</h2><p>Tanyakan pilihan pembayaran yang tersedia langsung kepada tim kami.</p></article>
         </section>
 
+        <!-- landing page kontribusi Andre 2413010662 -->
         <section class="menu-sectionkelompok3 section-wrapkelompok3" id="menukelompok3">
             <div class="section-headingkelompok3"><p class="eyebrowkelompok3">DARI DAPUR KAMI</p><h2>Menu favorit <span>pilihan keluarga.</span></h2><p>Hidangan sederhana dengan rasa yang selalu bikin rindu.</p></div>
             <div class="menu-gridkelompok3">
@@ -89,6 +90,7 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
         if ($reservasi === 'pembayaran') { include __DIR__ . '/form_mahasiswa/2513010779.php'; }
         ?>
 
+        <!-- landing page kontribusi Hubaib 2513010757 -->
         <section class="about-sectionkelompok3 section-wrapkelompok3" id="tentangkelompok3">
             <div><p class="eyebrowkelompok3">SELAMAT DATANG</p><h2>Tempat makan nyaman, <span>rasa penuh kenangan.</span></h2></div>
             <p>Warung Makan Mb Dina menyajikan hidangan rumahan khas Indonesia untuk dinikmati bersama keluarga dan teman.</p>
