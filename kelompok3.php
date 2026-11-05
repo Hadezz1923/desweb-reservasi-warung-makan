@@ -4,6 +4,8 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
     ? $reservasi
     : '';
 ?>
+
+<!-- landing page kontribusi Hanif 2513010779 -->
 <!doctype html>
 <html lang="id">
 <head>
