@@ -4,6 +4,8 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
     ? $reservasi
     : '';
 ?>
+
+<!-- landing page kontribusi Hanif 2513010779 -->
 <!doctype html>
 <html lang="id">
 <head>
@@ -11,6 +13,7 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Nikmati hidangan rumahan khas Indonesia di Warung Makan Mb Dina. Pesan meja dan menu favorit Anda." />
     <title>Warung Makan Mb Dina | Rasa Rumahan, Selalu Dirindukan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/kelompok3.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,16 +30,27 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
 </head>
 <body>
     <header class="site-headerkelompok3">
-        <nav class="navbarkelompok3" aria-label="Navigasi utama">
+        <div class="navbarkelompok3">
             <a class="brandkelompok3" href="#homekelompok3"><img src="assets/images/logo_persegi.png" alt="" /><span>WARUNG MAKAN<strong>MB DINA</strong></span></a>
-            <div class="nav-linkskelompok3">
-                <a href="#homekelompok3" class="menu-navkelompok3 activekelompok3">Beranda</a>
-                <a href="#menukelompok3" class="menu-navkelompok3">Menu</a>
-                <a href="#tentangkelompok3" class="menu-navkelompok3">Tentang Kami</a>
-            </div>
-        </nav>
+        </div>
     </header>
     <main>
+        <div class="container-sm page-layoutkelompok3 py-4">
+            <div class="row g-4">
+                <aside class="col-12 col-md-4" aria-label="Navigasi halaman">
+                    <div class="sidebar-panelkelompok3">
+                        <p class="eyebrowkelompok3">JELAJAHI WARUNG</p>
+                        <h2>Rasa dekat,<br />pilihan lengkap.</h2>
+                        <nav class="sidebar-linkskelompok3" aria-label="Navigasi konten">
+                            <a href="#homekelompok3">Beranda</a>
+                            <a href="#menukelompok3">Galeri hidangan</a>
+                            <a href="#reservasiKelompok3">Reservasi</a>
+                            <a href="#tentangkelompok3">Tentang kami</a>
+                        </nav>
+                        <a class="sidebar-ctakelompok3" href="kelompok3.php?reservasi=booking">Booking meja</a>
+                    </div>
+                </aside>
+                <div class="col-12 col-md-8 page-contentkelompok3">
         <section class="herokelompok3 section-wrapkelompok3" id="homekelompok3">
             <div class="hero-copykelompok3">
                 <p class="eyebrowkelompok3"><span>✦</span> HANGAT, LEZAT, DAN SELALU DIRINDUKAN</p>
@@ -58,19 +72,24 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
             <article class="step-cardkelompok3"><span class="step-numberkelompok3 step-goldkelompok3">03.</span><h2>Pembayaran Mudah</h2><p>Tanyakan pilihan pembayaran yang tersedia langsung kepada tim kami.</p></article>
         </section>
 
-        <section class="menu-sectionkelompok3 section-wrapkelompok3" id="menukelompok3">
-            <div class="section-headingkelompok3"><p class="eyebrowkelompok3">DARI DAPUR KAMI</p><h2>Menu favorit <span>pilihan keluarga.</span></h2><p>Hidangan sederhana dengan rasa yang selalu bikin rindu.</p></div>
-            <div class="menu-gridkelompok3">
-                <article class="dish-cardkelompok3"><img src="assets/images/ayam_bakar.webp" alt="Ayam bakar" /><div class="dish-copykelompok3"><h3>Ayam Bakar</h3><p>Ayam berbumbu yang dibakar hingga harum.</p></div></article>
-                <article class="dish-cardkelompok3"><img src="assets/images/gado_gado.webp" alt="Gado-gado" /><div class="dish-copykelompok3"><h3>Gado-gado</h3><p>Aneka sayuran dengan siraman saus kacang.</p></div></article>
-                <article class="dish-cardkelompok3"><img src="assets/images/lotek.webp" alt="Lotek" /><div class="dish-copykelompok3"><h3>Lotek</h3><p>Sayuran segar dengan bumbu kacang khas.</p></div></article>
-                <article class="dish-cardkelompok3"><img src="assets/images/selat.webp" alt="Selat" /><div class="dish-copykelompok3"><h3>Selat</h3><p>Hidangan khas Jawa dengan kuah gurih-manis.</p></div></article>
-                <article class="dish-cardkelompok3"><img src="assets/images/sop_ayam.webp" alt="Sop ayam" /><div class="dish-copykelompok3"><h3>Sop Ayam</h3><p>Kuah gurih hangat dengan ayam dan sayuran.</p></div></article>
-                <article class="dish-cardkelompok3"><img src="assets/images/sop_galantin.webp" alt="Sop galantin" /><div class="dish-copykelompok3"><h3>Sop Galantin</h3><p>Sop hangat dengan galantin dan sayuran.</p></div></article>
+        <!-- landing page kontribusi Andre 2413010662 -->
+        <section class="menu-sectionkelompok3 section-wrapkelompok3" id="menukelompok3" aria-labelledby="menuGalleryTitlekelompok3">
+            <div class="section-headingkelompok3">
+                <p class="eyebrowkelompok3">DARI DAPUR KAMI</p>
+                <h2 id="menuGalleryTitlekelompok3">Menu favorit <span>pilihan keluarga.</span></h2>
+                <p>Jelajahi hidangan rumahan dari dapur kami.</p>
+            </div>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 menu-gridkelompok3">
+                <div class="col"><article class="dish-cardkelompok3"><img src="assets/images/ayam_bakar.webp" alt="Ayam bakar" /><div class="dish-copykelompok3"><h3>Ayam Bakar</h3><p>Ayam berbumbu yang dibakar hingga harum.</p></div></article></div>
+                <div class="col"><article class="dish-cardkelompok3"><img src="assets/images/gado_gado.webp" alt="Gado-gado" /><div class="dish-copykelompok3"><h3>Gado-gado</h3><p>Aneka sayuran dengan siraman saus kacang.</p></div></article></div>
+                <div class="col"><article class="dish-cardkelompok3"><img src="assets/images/lotek.webp" alt="Lotek" /><div class="dish-copykelompok3"><h3>Lotek</h3><p>Sayuran segar dengan bumbu kacang khas.</p></div></article></div>
+                <div class="col"><article class="dish-cardkelompok3"><img src="assets/images/selat.webp" alt="Selat" /><div class="dish-copykelompok3"><h3>Selat</h3><p>Hidangan khas Jawa dengan kuah gurih-manis.</p></div></article></div>
+                <div class="col"><article class="dish-cardkelompok3"><img src="assets/images/sop_ayam.webp" alt="Sop ayam" /><div class="dish-copykelompok3"><h3>Sop Ayam</h3><p>Kuah gurih hangat dengan ayam dan sayuran.</p></div></article></div>
+                <div class="col"><article class="dish-cardkelompok3"><img src="assets/images/sop_galantin.webp" alt="Sop galantin" /><div class="dish-copykelompok3"><h3>Sop Galantin</h3><p>Sop hangat dengan galantin dan sayuran.</p></div></article></div>
             </div>
         </section>
 
-        <section class="reservasi-herokelompok3 section-wrapkelompok3">
+        <section class="reservasi-herokelompok3 section-wrapkelompok3" id="reservasiKelompok3">
             <div class="section-headingkelompok3 reservasi-headingkelompok3"><p class="eyebrowkelompok3">PILIH LAYANAN RESERVASI</p><h2>Reservasi <span>tanpa ribet.</span></h2></div>
             <div class="reservasi-gridkelompok3">
                 <a class="reservasi-cardkelompok3" href="kelompok3.php">Kembali</a>
@@ -86,13 +105,17 @@ $reservasi = is_string($reservasi) && in_array($reservasi, ['booking', 'pre-orde
         if ($reservasi === 'pembayaran') { include __DIR__ . '/form_mahasiswa/2513010779.php'; }
         ?>
 
-        <!-- Kontribusi Hubaib -->
+        <!-- landing page kontribusi Hubaib 2513010757 -->
 
         <section class="about-sectionkelompok3 section-wrapkelompok3" id="tentangkelompok3">
             <div><p class="eyebrowkelompok3">SELAMAT DATANG</p><h2>Tempat makan nyaman, <span>rasa penuh kenangan.</span></h2></div>
             <p>Warung Makan Mb Dina menyajikan hidangan rumahan khas Indonesia untuk dinikmati bersama keluarga dan teman.</p>
         </section>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer class="site-footerkelompok3 section-wrapkelompok3"><p>© 2026 Warung Makan Mb Dina. Rasa rumahan, selalu dirindukan.</p></footer>
+    <footer class="site-footerkelompok3 container-sm"><p>© 2026 Warung Makan Mb Dina. Rasa rumahan, selalu dirindukan.</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
