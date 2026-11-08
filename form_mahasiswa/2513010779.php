@@ -38,16 +38,21 @@ if (!empty($reservasiPaymentStyles)) {
             line-height: 1.6;
         }
 
-        .pembayaranFormkelompok3 {
-            display: grid;
-            gap: 18px;
-            margin-top: 26px;
+        .fotoProfil2513010779kelompok3 {
+            display: block;
+            width: 160px;
+            height: 160px;
+            margin: 20px 0;
+            border: 4px solid #ffe8df;
+            border-radius: 8px;
+            object-fit: cover;
+            object-position: center;
         }
 
-        .pembayaranFormkelompok3 label {
-            display: grid;
-            gap: 8px;
-            font-weight: 700;
+        @media (max-width: 350px) {
+            .fotoProfil2513010779kelompok3 {
+                border-radius: 50%;
+            }
         }
 
         .pembayaranFormkelompok3 input,
@@ -178,28 +183,29 @@ $rupiah2513010779 = static function (int $nilai2513010779): string {
     return 'Rp' . number_format($nilai2513010779, 0, ',', '.');
 };
 ?>
-<section class="pembayaranWrapperkelompok3" aria-labelledby="pembayaranTitlekelompok3">
-    <section class="pembayaranPanelkelompok3">
+<section class="pembayaranWrapperkelompok3 container-sm" aria-labelledby="pembayaranTitlekelompok3">
+    <section class="pembayaranPanelkelompok3 card">
         <p class="pembayaranEyebrowkelompok3">Pembayaran</p>
         <h2 id="pembayaranTitlekelompok3">Pesan menu favorit</h2>
         <p class="pembayaranIntrokelompok3">Isi data pesanan untuk melihat ringkasan dan total pembayaran.</p>
+        <img class="fotoProfil2513010779kelompok3" src="https://media1.tenor.com/m/YPs5Kl8GOu8AAAAd/curren-chan-uma-musume.gif" alt="GIF profil sementara Curren-chan" width="160" height="160" />
 
         <?php if ($pesanError2513010779 !== ''): ?>
-            <p class="pembayaranErrorkelompok3" role="alert">
+            <p class="pembayaranErrorkelompok3 alert alert-danger" role="alert">
                 <?= htmlspecialchars($pesanError2513010779, ENT_QUOTES, 'UTF-8') ?>
             </p>
         <?php endif; ?>
 
-        <form class="pembayaranFormkelompok3" method="post" action="kelompok3.php?reservasi=pembayaran">
-            <label for="nama2513010779kelompok3">
+        <form class="pembayaranFormkelompok3 d-grid gap-3 mt-4" method="post" action="kelompok3.php?reservasi=pembayaran">
+            <label class="form-label" for="nama2513010779kelompok3">
                 Nama
-                <input id="nama2513010779kelompok3" name="nama2513010779" type="text" maxlength="100" required
+                <input class="form-control" id="nama2513010779kelompok3" name="nama2513010779" type="text" maxlength="100" required
                     value="<?= htmlspecialchars($nama2513010779, ENT_QUOTES, 'UTF-8') ?>">
             </label>
 
-            <label for="menu2513010779kelompok3">
+            <label class="form-label" for="menu2513010779kelompok3">
                 Menu
-                <select id="menu2513010779kelompok3" name="menu2513010779" required>
+                <select class="form-select" id="menu2513010779kelompok3" name="menu2513010779" required>
                     <option value="">Pilih menu</option>
                     <?php foreach ($menuHarga2513010779 as $namaMenu2513010779 => $harga2513010779): ?>
                         <option value="<?= htmlspecialchars($namaMenu2513010779, ENT_QUOTES, 'UTF-8') ?>"
@@ -211,19 +217,19 @@ $rupiah2513010779 = static function (int $nilai2513010779): string {
                 </select>
             </label>
 
-            <label for="jumlah2513010779kelompok3">
+            <label class="form-label" for="jumlah2513010779kelompok3">
                 Jumlah
-                <input id="jumlah2513010779kelompok3" name="jumlah2513010779" type="number" min="1" max="20" required
+                <input class="form-control" id="jumlah2513010779kelompok3" name="jumlah2513010779" type="number" min="1" max="20" required
                     value="<?= htmlspecialchars((string) $jumlah2513010779, ENT_QUOTES, 'UTF-8') ?>">
             </label>
 
-            <button class="pembayaranButtonkelompok3" type="submit">Bayar dan tampilkan struk</button>
+            <button class="pembayaranButtonkelompok3 btn btn-danger w-100" type="submit">Bayar dan tampilkan struk</button>
         </form>
     </section>
 
     <?php if ($pesananValid2513010779): ?>
         <?php $total2513010779 = $menuHarga2513010779[$menuDipilih2513010779] * $jumlah2513010779; ?>
-        <section class="pembayaranPanelkelompok3" aria-labelledby="strukTitlekelompok3">
+        <section class="pembayaranPanelkelompok3 card" aria-labelledby="strukTitlekelompok3">
             <p class="pembayaranEyebrowkelompok3">Struk Pesanan</p>
             <h2 id="strukTitlekelompok3">Ringkasan pembayaran</h2>
             <div class="pembayaranReceiptRowkelompok3">
@@ -246,7 +252,7 @@ $rupiah2513010779 = static function (int $nilai2513010779): string {
             <p class="pembayaranReceiptNotekelompok3">Ini adalah simulasi pembayaran untuk pesanan Anda.</p>
         </section>
 
-        <section class="pembayaranPanelkelompok3 pembayaranSuccesskelompok3" aria-live="polite">
+        <section class="pembayaranPanelkelompok3 pembayaranSuccesskelompok3 card" aria-live="polite">
             <h2>Pembayaran berhasil dicatat!</h2>
             <p>Terima kasih, <?= htmlspecialchars($nama2513010779, ENT_QUOTES, 'UTF-8') ?>. Pesanan Anda sudah tercatat.</p>
         </section>
