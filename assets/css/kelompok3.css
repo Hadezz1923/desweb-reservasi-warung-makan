@@ -7,6 +7,11 @@
     --red: #c90f2f;
     --red-dark: #a90926;
     --white: #fffefd;
+
+    /* Warna tambahan */
+    --orange: #e67e22;
+    --orange-dark: #d35400;
+    --border-soft: #dfcdb8;
 }
 
 * {
@@ -335,9 +340,11 @@ a {
     color: var(--brown-soft);
 }
 
+/*=== kolom 2 / 662 ===*/
+
 .menu-gridkelompok3 {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
 }
 
@@ -388,7 +395,7 @@ a {
     background: #ffe7d7;
 }
 
-.reservasi-herokelompok3{
+.reservasi-herokelompok3 {
     padding-top: 70px;
     padding-bottom: 82px;
     border-top: 1px solid #efdfc8;
@@ -422,7 +429,6 @@ a {
     text-decoration: none;
     transition: background 160ms ease, transform 160ms ease;
 }
-
 
 .about-sectionkelompok3 .eyebrowkelompok3 {
     margin-bottom: 10px;
@@ -632,7 +638,7 @@ a {
     }
 
     .menu-gridkelompok3 {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .dish-cardkelompok3 img {
@@ -650,103 +656,190 @@ a {
 }
 
 /* === KHUSUS PRE-ORDER 2413010662 - CARD PUTIH TENGAH === */
+
 .preOrderWrapperkelompok3,
-.pembayaranWrapperkelompok3{
-    width:min(100% - 32px, 760px);
-    margin:40px auto;
-    padding:0;
+.pembayaranWrapperkelompok3 {
+    width: min(100% - 32px, 760px);
+    margin: 40px auto;
+    padding: 0;
 }
+
 .preOrderPanelkelompok3,
-.pembayaranPanelkelompok3{
-    background:#fffefd;
-    padding:32px;
-    border-radius:20px;
-    border:1px solid rgba(100,63,39,.08);
-    box-shadow:0 12px 34px rgba(83,52,27,.08);
+.pembayaranPanelkelompok3 {
+    background: #fffefd;
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid rgba(100, 63, 39, .08);
+    box-shadow: 0 12px 34px rgba(83, 52, 27, .08);
 }
+
 .preOrderEyebrowkelompok3,
-.pembayaranEyebrowkelompok3{
-    margin:0 0 8px;
-    color:var(--red);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:.08em;
-    text-transform:uppercase;
+.pembayaranEyebrowkelompok3 {
+    margin: 0 0 8px;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
 }
+
 .preOrderPanelkelompok3 h2,
-.pembayaranPanelkelompok3 h2{
-    margin:0 0 12px;
-    font-size:32px;
-    line-height:1.1;
-    color:var(--brown);
+.pembayaranPanelkelompok3 h2 {
+    margin: 0 0 12px;
+    font-size: 32px;
+    line-height: 1.1;
+    color: var(--brown);
 }
+
 .preOrderIntrokelompok3,
-.pembayaranIntrokelompok3{
-    margin:0;
-    color:var(--brown-soft);
-    font-size:14px;
-    line-height:1.6;
+.pembayaranIntrokelompok3 {
+    margin: 0;
+    color: var(--brown-soft);
+    font-size: 14px;
+    line-height: 1.6;
 }
+
 .preOrderFormkelompok3,
-.pembayaranFormkelompok3{
-    display:grid;
-    gap:16px;
-    margin-top:24px;
+.pembayaranFormkelompok3 {
+    display: grid;
+    gap: 16px;
+    margin-top: 24px;
 }
+
 .preOrderFormkelompok3 label,
-.pembayaranFormkelompok3 label{
-    display:grid;
-    gap:8px;
-    font-weight:700;
-    font-size:14px;
-    color:var(--brown);
+.pembayaranFormkelompok3 label {
+    display: grid;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--brown);
 }
+
 .preOrderFormkelompok3 input,
 .preOrderFormkelompok3 select,
 .preOrderFormkelompok3 textarea,
 .pembayaranFormkelompok3 input,
 .pembayaranFormkelompok3 select,
-.pembayaranFormkelompok3 textarea{
-    width:100%;
-    min-height:48px;
-    padding:12px 14px;
-    border:1px solid #e7d5c0;
-    border-radius:12px;
-    background:#fff;
-    font:inherit;
-    color:var(--brown);
+.pembayaranFormkelompok3 textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #e7d5c0;
+    border-radius: 12px;
+    background: #fff;
+    font: inherit;
+    color: var(--brown);
 }
+
 .preOrderFormkelompok3 textarea,
-.pembayaranFormkelompok3 textarea{min-height:100px;resize:vertical}
+.pembayaranFormkelompok3 textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
 .preOrderButtonkelompok3,
-.pembayaranButtonkelompok3{
-    min-height:52px;
-    border:0;
-    border-radius:12px;
-    background:var(--red);
-    color:#fff;
-    font-weight:800;
-    font-size:15px;
-    cursor:pointer;
-    margin-top:8px;
+.pembayaranButtonkelompok3 {
+    min-height: 52px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--red);
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 8px;
 }
+
 .preOrderButtonkelompok3:hover,
-.pembayaranButtonkelompok3:hover{background:var(--red-dark)}
+.pembayaranButtonkelompok3:hover {
+    background: var(--red-dark);
+}
+
 .preOrderErrorkelompok3,
-.pembayaranErrorkelompok3{
-    background:#fff0f0;
-    color:var(--red-dark);
-    padding:12px 14px;
-    border-radius:10px;
-    font-size:14px;
+.pembayaranErrorkelompok3 {
+    background: #fff0f0;
+    color: var(--red-dark);
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 14px;
 }
+
 .preOrderReceiptRowkelompok3,
-.pembayaranReceiptRowkelompok3{
-    display:flex;
-    justify-content:space-between;
-    gap:12px;
-    padding:12px 0;
-    border-bottom:1px solid #f0dfc8;
+.pembayaranReceiptRowkelompok3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0dfc8;
 }
+
 .preOrderSuccesskelompok3,
-.pembayaranSuccesskelompok3{border-color:#b7ddbe;background:#f1fff3}
+.pembayaranSuccesskelompok3 {
+    border-color: #b7ddbe;
+    background: #f1fff3;
+}
+
+/* =========================================
+   GALLERY UTS - KELOMPOK GANJIL
+========================================= */
+
+.gallery-sectionkelompok3 {
+    padding-top: 65px;
+    padding-bottom: 70px;
+    border-top: 1px solid #efdfc8;
+}
+
+.gallery-gridkelompok3 {
+    margin-top: 28px;
+}
+
+.gallery-gridkelompok3 > .gallery-itemkelompok3 {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.gallery-itemkelompok3 img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+    background: var(--cream-dark);
+    transition: transform 0.3s ease;
+}
+
+.gallery-itemkelompok3 img:hover {
+    transform: scale(1.03);
+}
+
+/* Layar di atas 768px: 3 kolom */
+
+@media (min-width: 769px) {
+    .gallery-gridkelompok3 > .gallery-itemkelompok3 {
+        flex: 0 0 33.333333%;
+        width: 33.333333%;
+    }
+}
+
+/* Layar di atas 992px: 4 kolom */
+
+@media (min-width: 993px) {
+    .gallery-gridkelompok3 > .gallery-itemkelompok3 {
+        flex: 0 0 25%;
+        width: 25%;
+    }
+}
+
+/* Tampilan HP */
+
+@media (max-width: 720px) {
+    .gallery-sectionkelompok3 {
+        padding-top: 45px;
+        padding-bottom: 50px;
+    }
+
+    .gallery-itemkelompok3 img {
+        height: 200px;
+    }
+}
