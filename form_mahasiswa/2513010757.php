@@ -133,10 +133,18 @@ if (!empty($reservasiBookingStyles)) {
                 gap: 4px;
             }
         }
+
+        @media (max-width: 350px) {
+            .fotoProfil2513010757kelompok3 {
+                border-radius: 50%;
+            }
+        }
     </style>
     <?php
     return;
 }
+
+// Variabel atau Data yang diperlukan
 
 $areaBooking2513010757 = ['Lesehan', 'Meja', 'Area Outdoor', 'Meja Indoor'];
 $namaBooking2513010757 = '';
@@ -147,12 +155,16 @@ $areaDipilih2513010757 = '';
 $bookingValid2513010757 = false;
 $pesanErrorBooking2513010757 = '';
 
+// Cek form sudah dikirim (pelanggan) dan mengambil data dari form (pelanggan)
+
 if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     $namaInputBooking2513010757 = $_POST['nama2513010757'] ?? '';
     $tanggalInputBooking2513010757 = $_POST['tanggal2513010757'] ?? '';
     $jamInputBooking2513010757 = $_POST['jam2513010757'] ?? '';
     $jumlahInputBooking2513010757 = $_POST['jumlah2513010757'] ?? '';
     $areaInputBooking2513010757 = $_POST['area2513010757'] ?? '';
+    
+    // Memastikan jenis data
 
     $namaBooking2513010757 = is_string($namaInputBooking2513010757) ? trim($namaInputBooking2513010757) : '';
     $tanggalBooking2513010757 = is_string($tanggalInputBooking2513010757) ? $tanggalInputBooking2513010757 : '';
@@ -161,6 +173,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     $jumlahParsedBooking2513010757 = is_string($jumlahInputBooking2513010757)
         ? filter_var($jumlahInputBooking2513010757, FILTER_VALIDATE_INT)
         : false;
+        
+        // Memeriksa format tanggal
 
     $tanggalValidBooking2513010757 = false;
     if (preg_match('/^\d{4}-\d{2}-\d{2}$/D', $tanggalBooking2513010757) === 1) {
@@ -172,6 +186,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             $tahunBooking2513010757
         );
     }
+
+    // Pengecekan data
 
     if ($namaBooking2513010757 === '' || strlen($namaBooking2513010757) > 100) {
         $pesanErrorBooking2513010757 = 'Nama pemesan wajib diisi (maksimal 100 karakter).';
@@ -193,6 +209,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     }
 }
 ?>
+
 <section class="bookingWrapperkelompok3" aria-labelledby="bookingTitlekelompok3">
     <section class="bookingPanelkelompok3">
         <p class="bookingEyebrowkelompok3">Booking Meja</p>
@@ -200,6 +217,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
         <p class="bookingIntrokelompok3">
             Isi detail kedatangan dan kami siapkan tempat yang nyaman untuk Anda.
         </p>
+        <img class="fotoProfil2513010757kelompok3" src="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Profil2513010757" width="160" height="160" />
 
         <?php if ($pesanErrorBooking2513010757 !== ''): ?>
             <p class="bookingErrorkelompok3" role="alert">
@@ -212,7 +230,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
                 Nama pemesan
                 <input id="nama2513010757kelompok3" name="nama2513010757" type="text" maxlength="100" required
                     autocomplete="name"
-                    value="<?= htmlspecialchars($namaBooking2513010757, ENT_QUOTES, 'UTF-8') ?>">
+                    value="<?= htmlspecialchars($namaBooking2513010757, ENT_QUOTES, 'UTF-8') ?>">  
             </label>
 
             <label for="tanggal2513010757kelompok3">
